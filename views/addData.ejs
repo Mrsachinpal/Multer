@@ -1,0 +1,32 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+<form class="w-50 mx-auto m-5 text-center" action="/add" method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <div class="m-2">
+            <label for="Emp_name">Name: </label>
+            <input type="text" id="Emp_name" name="Emp_name">
+        </div>
+        <div class="m-2">
+            <label for="Emp_id">Id: </label>
+            <input type="number" id="Emp_id" name="Emp_id">
+        </div>
+        <div class="m-2">
+            <label for="Emp_password">Password: </label>
+            <input type="password" id="Emp_password" name="Emp_password">
+        </div>
+        <div class="m-2">
+            <label for="Emp_jobtitle">Job Title: </label>
+            <input type="text" id="Emp_jobtitle" name="Emp_jobtitle">
+        </div>
+        <div class="m-2">
+            <label for="Emp_devicetoken">Token: </label>
+            <input type="text" id="Emp_devicetoken" name="Emp_devicetoken">
+        </div>
+        <div class="m-2">
+            <label for="Emp_image">Upload Image: </label>
+            <input type="file" id="Emp_image" name="Emp_image">
+        </div>
+    </div>
+    <button class="btn btn-primary mt-4">Submit</button>
+</form>
+<%-include('./partials/footer')%>

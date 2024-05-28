@@ -1,0 +1,23 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+
+<h1 class="m-4">Employee details</h1>
+
+<div class="container  border">
+    <div class="row text-center">
+        <div class="col-lg-4 col-md-4 col-sm-12 border  p-4">
+            <% if (EmpFound.Emp_image) { %>
+                <p><img src="data:<%= EmpFound.Emp_image.contentType %>;base64,<%= EmpFound.Emp_image.data.toString('base64') %>" alt="Employee Image" style="width:100%;height:auto;"></p>
+            <% } %>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 border p-4 ">
+            <div><h3><b>Name:</b> <%=EmpFound.Emp_name%></h3></div>
+            <div><h3><b>Id:</b> <%=EmpFound.Emp_id%></h3></div>
+            <div><h3><b>Password:</b> <%=EmpFound.Emp_password%></h3></div>
+            <div><h3><b>Title:</b> <%=EmpFound.Emp_jobtitle%></h3></div>
+            <div><h3><b>Token:</b> <%=EmpFound.Emp_devicetoken%></h3></div>
+        </div>
+    </div>
+</div>
+
+<%-include('./partials/footer')%>
